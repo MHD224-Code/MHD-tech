@@ -16,9 +16,17 @@ body { font-family: 'Inter', sans-serif; margin: 0; background: var(--light); co
 /* NAV & HERO */
 nav { background: rgba(15, 23, 42, 0.98); padding: 1.2rem 0; text-align: center; border-bottom: 1px solid #1e293b; position: sticky; top: 0; z-index: 1000; }
 .logo { font-size: 1.5rem; font-weight: 800; color: white; letter-spacing: 1px; }
-header { height: 90vh; background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1350') center/cover; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 0 var(--side-padding); }
-.hero h1 { font-size: 3rem; margin-bottom: 20px; }
-.brand-name { color: var(--accent); }
+header { 
+    height: 90vh; 
+    /* Utilise exactement le nom du fichier que tu as chargé sur GitHub */
+    background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)), url('hero-mhd.jpg.png') center/cover; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    color: white; 
+    padding: 0 var(--side-padding); 
+}
 
 /* SECTIONS */
 section { padding: 80px var(--side-padding); }
