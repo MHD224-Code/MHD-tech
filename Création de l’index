@@ -1,10 +1,9 @@
-index.htlm
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MHD-tech | Services Informatiques</title>
+    <title>MHD-tech | Solutions Informatiques</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,32 +16,41 @@ index.htlm
             </ul>
         </nav>
         <div class="hero">
-            <h1>Solutions Informatiques Professionnelles</h1>
-            <p>Maintenance, Récupération de données et Optimisation Système.</p>
-            <a href="#contact" class="btn">Demander un devis</a>
+            <h1>MHD-tech : Votre Expert Informatique</h1>
+            <p>Maintenance, Sécurité et Récupération de données pour tous.</p>
+            <a href="https://wa.me/224623770166" class="btn">Me contacter sur WhatsApp</a>
         </div>
     </header>
 
     <section id="services">
-        <h2>Nos Services</h2>
+        <h2>Nos Services Professionnels</h2>
         <div class="service-container">
             <div class="card">
-                <h3>Installation OS</h3>
-                <p>Installation propre de Windows et logiciels essentiels.</p>
+                <h3>💻 Installation OS</h3>
+                <p>Installation propre de Windows (10/11), pilotes et logiciels essentiels.</p>
             </div>
             <div class="card">
-                <h3>Récupération</h3>
-                <p>Récupération de données perdues et sauvegarde sécurisée.</p>
+                <h3>🛡️ Sécurité & Antivirus</h3>
+                <p>Suppression de virus et installation de protections puissantes.</p>
             </div>
             <div class="card">
-                <h3>Sécurité</h3>
-                <p>Suppression de virus et protection de vos systèmes.</p>
+                <h3>🔓 Mots de passe</h3>
+                <p>Réinitialisation ou récupération de mots de passe perdus.</p>
+            </div>
+            <div class="card">
+                <h3>📁 Récupération</h3>
+                <p>Récupération de vos fichiers et données supprimées par erreur.</p>
+            </div>
+            <div class="card">
+                <h3>⚙️ Optimisation</h3>
+                <p>Nettoyage complet pour redonner de la vitesse à votre ordinateur.</p>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 MHD-tech - Tous droits réservés.</p>
+        <p>&copy; 2026 MHD-tech - Entreprise de Services Numériques</p>
     </footer>
 </body>
 </html>
+
