@@ -1,49 +1,96 @@
-  :root {
+:root {
     --primary: #2563eb;
     --dark: #1e293b;
     --light: #f8fafc;
+    --accent: #facc15; /* Jaune doré pour le M,H,D */
+    --hover-card: #e5edff;
+    --portfolio-bg: #e2e8f0;
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     color: var(--dark);
     background-color: var(--light);
+    scroll-behavior: smooth;
+    opacity: 0;
+    animation: fadeInPage 1s ease-out forwards;
 }
 
-header {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1350&q=80');
-    background-size: cover;
-    color: white;
-    padding: 2rem 5%;
-    text-align: center;
-}
+/* --- LOGO STYLISÉ --- */
+.logo { font-size: 2rem; font-weight: 800; text-transform: uppercase; color: white; letter-spacing: 1px; }
+.logo span { color: var(--accent); }
+.logo-h, .logo-d { color: white; border-bottom: 2px solid var(--accent); margin: 0 1px; }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo { font-size: 1.5rem; font-weight: bold; }
-.logo span { color: var(--primary); }
-
+/* --- NAVIGATION --- */
+nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; background-color: var(--dark); color: white; }
 nav ul { list-style: none; display: flex; gap: 20px; }
-nav a { color: white; text-decoration: none; }
+nav a { color: white; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: color 0.3s; }
+nav a:hover { color: var(--accent); }
 
-.hero { padding: 100px 0; }
-.btn { background: var(--primary); color: white; padding: 10px 25px; text-decoration: none; border-radius: 5px; }
+/* --- HERO SECTION --- */
+header { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1350&q=80') center center no-repeat; background-size: cover; color: white; padding: 2rem 5%; text-align: center; height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+.hero { padding: 0; }
+.hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem; color: white; }
+.hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 2rem auto; color: #ddd; line-height: 1.6; }
+.brand-name { color: var(--accent); text-transform: uppercase; letter-spacing: 2px; }
 
-#services { padding: 50px 5%; text-align: center; }
-.service-container { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
+/* --- BOUTONS --- */
+.btn { background: var(--primary); color: white; padding: 15px 35px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.1rem; transition: transform 0.3s, background 0.3s, box-shadow 0.3s; display: inline-block; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.btn:hover { background: #1d4ed8; transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.2); }
 
-.card {
-    background: white;
-    padding: 20px;
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+/* --- SERVICES SECTION --- */
+#services { padding: 100px 5%; text-align: center; }
+.service-description { max-width: 800px; margin: 0 auto 60px auto; font-size: 1.1rem; color: #666; line-height: 1.7; }
+.service-container { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
+
+/* --- CARTES SERVICES --- */
+.card { background: white; padding: 30px; width: 300px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.4s, box-shadow 0.4s, background 0.4s; border-top: 5px solid transparent; text-align: left; }
+.card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); background: var(--hover-card); border-top-color: var(--primary); }
+.card h3 { font-size: 1.5rem; font-weight: 700; color: var(--dark); margin-bottom: 10px; }
+.card p { font-size: 1.0rem; color: #666; line-height: 1.6; }
+.service-icon { font-size: 3rem; color: var(--primary); margin-bottom: 15px; display: block; }
+.card:hover .service-icon { transform: scale(1.1); transition: transform 0.3s; }
+
+/* --- PORTFOLIO SECTION --- */
+#portfolio { padding: 100px 5%; background-color: var(--portfolio-bg); text-align: center; }
+.portfolio-container { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; margin-top: 50px; }
+.portfolio-item { position: relative; width: 350px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s; cursor: pointer; }
+.portfolio-item img { width: 100%; height: 250px; object-fit: cover; display: block; }
+.portfolio-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s; text-align: center; padding: 20px; }
+.portfolio-item:hover { transform: scale(1.03); }
+.portfolio-item:hover .portfolio-overlay { opacity: 1; }
+.portfolio-overlay h4 { font-size: 1.4rem; color: var(--accent); margin-bottom: 5px; }
+.portfolio-overlay p { font-size: 1rem; color: #ddd; }
+
+/* --- CONTACT SECTION --- */
+#contact { padding: 100px 5%; text-align: center; }
+.contact-details { display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; margin-top: 50px; }
+.contact-item { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 250px; transition: transform 0.3s; border-left: 5px solid var(--primary); }
+.contact-item:hover { transform: translateY(-5px); }
+.contact-item i { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; }
+.contact-item p { font-size: 1.1rem; color: var(--dark); margin-bottom: 5px; font-weight: bold; }
+.contact-link { color: var(--dark); text-decoration: none; font-size: 1.1rem; transition: color 0.3s; }
+.contact-link:hover { color: var(--primary); }
+
+/* --- FOOTER --- */
+footer { background: var(--dark); color: white; padding: 2rem 5%; text-align: center; }
+
+/* --- ANIMATIONS GÉNÉRALES --- */
+@keyframes fadeInPage { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Applique l'animation fadeInUp au chargement */
+.fade-in { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; }
+.hero h1 { animation: fadeInUp 1s ease-out forwards 0.2s; opacity: 0; }
+.hero p { animation: fadeInUp 1s ease-out forwards 0.4s; opacity: 0; }
+.hero .btn { animation: fadeInUp 1s ease-out forwards 0.6s; opacity: 0; }
+
+/* --- RESPONSIVENESS (Mobile) --- */
+@media (max-width: 768px) {
+    nav ul { display: none; } /* Cache le menu sur mobile */
+    .hero h1 { font-size: 2.5rem; }
+    .hero p { font-size: 1.1rem; }
+    .card, .portfolio-item, .contact-item { width: 100%; max-width: 350px; }
+    #services, #portfolio, #contact { padding: 60px 5%; }
 }
-
-.card:hover { transform: translateY(-10px); }
