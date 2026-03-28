@@ -3,84 +3,71 @@
     --dark: #0f172a;
     --light: #f8fafc;
     --accent: #fbbf24;
-    --side-padding: 6%; /* Marge de sécurité pour le téléphone */
+    --side-padding: 8%;
 }
 
-/* LOADER */
+/* LOADER CINÉMATIQUE HADY IBN IBRAHIM */
 #loader {
     position: fixed; width: 100%; height: 100%; background: var(--dark);
-    display: flex; flex-direction: column; justify-content: center; align-items: center;
-    z-index: 9999; color: white;
+    display: flex; justify-content: center; align-items: center; z-index: 10000;
 }
-.spinner {
-    width: 50px; height: 50px; border: 5px solid #334155;
-    border-top: 5px solid var(--accent); border-radius: 50%;
-    animation: spin 1s linear infinite; margin-bottom: 10px;
-}
-@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.loader-content { text-align: center; color: white; }
+.logo-cinematic { font-size: 2.8rem; font-weight: 900; text-transform: uppercase; }
+.mhd-line { letter-spacing: 12px; margin-bottom: 10px; }
+.letter { display: inline-block; opacity: 0; transform: translateY(20px); animation: reveal 0.5s forwards; }
+.dash { display: inline-block; opacity: 0; animation: reveal 0.5s 1.2s forwards; color: var(--accent); }
+.tech { display: inline-block; opacity: 0; transform: scale(0.5); animation: zoomIn 0.8s 1.8s forwards; color: var(--accent); }
 
-/* GÉNÉRAL */
-body { font-family: 'Inter', sans-serif; margin: 0; background: var(--light); color: var(--dark); scroll-behavior: smooth; line-height: 1.6; }
-h2.section-title { font-size: 2.2rem; text-align: center; margin-bottom: 40px; font-weight: 800; color: var(--dark); text-transform: uppercase; letter-spacing: 1px; }
+.hady-line { margin-top: 15px; font-size: 1.2rem; letter-spacing: 5px; color: #94a3b8; opacity: 0; animation: reveal 1s 2.2s forwards; }
+
+@keyframes reveal { to { opacity: 1; transform: translateY(0); } }
+@keyframes zoomIn { to { opacity: 1; transform: scale(1); } }
+
+.loader-bar { width: 0; height: 2px; background: var(--accent); margin-top: 25px; animation: progress 2.8s linear forwards; }
+@keyframes progress { to { width: 100%; } }
+.fade-out { opacity: 0; transition: opacity 1s; }
 
 /* NAVIGATION */
-nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem var(--side-padding); background: rgba(15, 23, 42, 0.98); position: sticky; top: 0; z-index: 100; }
-.logo { font-size: 1.6rem; font-weight: 900; color: white; }
-.logo span { color: var(--accent); }
-nav ul { display: flex; gap: 20px; list-style: none; }
-nav a { color: #cbd5e1; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+nav { background: rgba(15, 23, 42, 0.98); padding: 1.2rem 0; position: sticky; top: 0; z-index: 100; text-align: center; border-bottom: 1px solid #1e293b; }
+.brand-identity { display: flex; flex-direction: column; align-items: center; }
+.nav-mhd { font-size: 1.5rem; font-weight: 900; color: white; letter-spacing: 2px; }
+.nav-mhd span { color: var(--accent); }
+.nav-hady { font-size: 0.7rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 3px; margin-top: -4px; font-weight: 700; }
 
-/* HERO SECTION */
-header { height: 85vh; background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1350&q=80') center/cover; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 0 var(--side-padding); }
-.hero h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 20px; }
-.brand-name { color: var(--accent); }
-.hero-btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+/* HERO */
+header { height: 90vh; background: linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.8)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1350&q=80') center/cover; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 0 var(--side-padding); }
+.hero h1 { font-size: 3.2rem; margin-bottom: 20px; }
+.brand-name { color: var(--accent); text-transform: uppercase; }
 
 /* BOUTONS */
-.btn { background: var(--primary); color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; transition: 0.3s; display: inline-block; }
-.btn-outline { background: transparent; border: 2px solid white; }
-.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+.btn { background: var(--primary); color: white; padding: 14px 30px; border-radius: 8px; text-decoration: none; font-weight: 700; transition: 0.3s; display: inline-block; }
+.btn-alt { background: #1e293b; border: 2px solid var(--accent); color: white; }
 
-/* SECTION ENGAGEMENTS (RÉASSURANCE) */
-#engagements { padding: 80px var(--side-padding); background: white; border-radius: 30px 30px 0 0; margin-top: -40px; position: relative; }
-.engagements-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-.eng-card { text-align: center; padding: 35px 25px; border-radius: 20px; background: #f8fafc; border: 1px solid #e2e8f0; transition: 0.3s; }
-.eng-card i { font-size: 2.8rem; color: var(--primary); margin-bottom: 15px; }
-.eng-card h3 { font-size: 1.4rem; margin-bottom: 12px; color: var(--dark); }
-.eng-card p { font-size: 1rem; color: #64748b; }
+/* SECTIONS */
+section { padding: 90px var(--side-padding); }
+.section-title { font-size: 2.2rem; text-align: center; margin-bottom: 50px; font-weight: 800; text-transform: uppercase; }
 
-/* SERVICES */
-#services { padding: 80px var(--side-padding); background: #f1f5f9; }
-.service-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.card { background: white; padding: 35px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+/* SERVICES (5 CARDS) */
+.service-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+.card { background: white; padding: 35px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-left: 5px solid var(--primary); transition: 0.3s; }
+.card:hover { transform: translateY(-5px); }
+.service-windows { background: #f0f9ff; }
 .service-icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; }
 
-/* SECTION À PROPOS */
-#about { padding: 80px var(--side-padding); background: var(--dark); color: white; text-align: center; }
-.about-text { max-width: 700px; margin: 0 auto; padding: 0 10px; }
-
-/* TÉMOIGNAGES */
-#testimonials { padding: 80px var(--side-padding); background: white; }
-.testimonial-grid { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
-.testi-card { background: #f1f5f9; padding: 30px; border-radius: 15px; width: 100%; max-width: 350px; }
-
 /* CONTACT */
-#contact { padding: 80px var(--side-padding); text-align: center; }
-.contact-details { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
-.contact-item { background: white; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0; flex: 1; min-width: 250px; }
-.contact-link { color: var(--primary); text-decoration: none; font-weight: 800; font-size: 1.2rem; }
+.contact-details { display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
+.contact-link { font-size: 1.4rem; color: var(--primary); text-decoration: none; }
+.contact-separator { font-weight: 800; color: #64748b; font-size: 1.2rem; }
 
 /* FOOTER */
-footer { padding: 40px var(--side-padding); background: var(--dark); color: #94a3b8; text-align: center; font-size: 0.9rem; }
+footer { padding: 50px var(--side-padding); background: var(--dark); color: #64748b; text-align: center; }
+.footer-hady { color: white; font-weight: 800; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 10px; }
 
 /* ANIMATIONS */
-.fade-in { opacity: 0; animation: fadeInUp 0.8s ease-out forwards; }
-@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.fade-in { opacity: 0; animation: fadeInUp 0.8s forwards; }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
-/* RESPONSIVE MOBILE */
 @media (max-width: 768px) {
-    :root { --side-padding: 8%; } /* Encore plus d'espace sur les bords du téléphone */
     .hero h1 { font-size: 2.2rem; }
-    h2.section-title { font-size: 1.8rem; }
-    nav ul { display: none; }
+    .logo-cinematic { font-size: 1.8rem; letter-spacing: 6px; }
 }
