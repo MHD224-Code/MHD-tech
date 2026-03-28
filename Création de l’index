@@ -1,0 +1,48 @@
+index.htlm
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MHD-tech | Services Informatiques</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MHD-<span>tech</span></div>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>Solutions Informatiques Professionnelles</h1>
+            <p>Maintenance, Récupération de données et Optimisation Système.</p>
+            <a href="#contact" class="btn">Demander un devis</a>
+        </div>
+    </header>
+
+    <section id="services">
+        <h2>Nos Services</h2>
+        <div class="service-container">
+            <div class="card">
+                <h3>Installation OS</h3>
+                <p>Installation propre de Windows et logiciels essentiels.</p>
+            </div>
+            <div class="card">
+                <h3>Récupération</h3>
+                <p>Récupération de données perdues et sauvegarde sécurisée.</p>
+            </div>
+            <div class="card">
+                <h3>Sécurité</h3>
+                <p>Suppression de virus et protection de vos systèmes.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 MHD-tech - Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
