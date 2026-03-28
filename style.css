@@ -18,8 +18,7 @@ nav { background: rgba(15, 23, 42, 0.98); padding: 1.2rem 0; text-align: center;
 .logo { font-size: 1.5rem; font-weight: 800; color: white; letter-spacing: 1px; }
 header { 
     height: 90vh; 
-    /* Utilise exactement le nom du fichier que tu as chargé sur GitHub */
-    background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)), url('hero-mhd.jpg.png') center/cover; 
+    background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)), url('hero-mhd.jpg.png') center/cover no-repeat; 
     display: flex; 
     align-items: center; 
     justify-content: center; 
