@@ -1,109 +1,146 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MHD-tech | Solutions Informatiques Professionnelles</title>
+    <title>MHD-tech | Expertise Informatique & Maintenance Windows</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
+    <div id="loader">
+        <div class="spinner"></div>
+        <p>MHD-tech...</p>
+    </div>
+
     <header>
         <nav>
             <div class="logo">M<span class="logo-h">H</span><span class="logo-d">D</span>-<span>tech</span></div>
             <ul>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#engagements">Engagements</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div class="hero">
-            <h1>Bienvenue chez <span class="brand-name">MHD-TECH</span></h1>
-            <p>Votre Expert Informatique de Confiance. Maintenance, Sécurité et Récupération de données pour tous.</p>
-            <a href="#" id="whatsapp-btn" class="btn">Me contacter sur WhatsApp</a>
+            <h1>Expertise Informatique <br><span class="brand-name">MHD-TECH</span></h1>
+            <p>Maintenance proactive et solutions numériques à Kindia. Nous redonnons vie à votre matériel avec rigueur et transparence.</p>
+            <div class="hero-btns">
+                <a href="#" id="whatsapp-btn" class="btn">Assistance Immédiate</a>
+                <a href="#services" class="btn btn-outline">Nos Services</a>
+            </div>
         </div>
     </header>
 
+    <section id="engagements">
+        <div class="engagements-grid">
+            <div class="eng-card fade-in">
+                <i class='bx bxs-bolt'></i>
+                <h3>Rapidité</h3>
+                <p>Intervention et diagnostic sous 24h à 48h maximum.</p>
+            </div>
+            <div class="eng-card fade-in">
+                <i class='bx bxs-lock-alt'></i>
+                <h3>Confidentialité</h3>
+                <p>Vos fichiers personnels sont traités avec une discrétion totale.</p>
+            </div>
+            <div class="eng-card fade-in">
+                <i class='bx bxs-badge-check'></i>
+                <h3>Garantie 7j</h3>
+                <p>Suivi gratuit si le même problème revient après l'intervention.</p>
+            </div>
+        </div>
+    </section>
+
     <section id="services">
-        <h2>Nos Solutions Informatiques</h2>
-        <p class="service-description">Des interventions rapides et professionnelles pour garantir le bon fonctionnement de votre matériel informatique sous Windows.</p>
+        <h2>Nos Solutions Spécialisées</h2>
         <div class="service-container">
             <div class="card fade-in">
                 <i class='bx bxl-windows service-icon'></i>
                 <h3>Installation Windows</h3>
-                <p>Installation propre et complète de Windows (10 ou 11). Nous configurons votre système avec tous les pilotes nécessaires et les mises à jour de sécurité pour une utilisation immédiate.</p>
+                <p>Système Windows 10/11 optimisé avec tous les pilotes officiels et mises à jour de sécurité.</p>
             </div>
             <div class="card fade-in">
                 <i class='bx bxs-shield-check service-icon'></i>
-                <h3>Sécurité & Antivirus</h3>
-                <p>Nettoyage complet de virus et malwares. Nous installons des protections puissantes pour sécuriser vos données personnelles et professionnelles contre les menaces.</p>
-            </div>
-            <div class="card fade-in">
-                <i class='bx bxs-keyboard service-icon'></i>
-                <h3>Gestion de Mots de Passe</h3>
-                <p>Récupération ou réinitialisation sécurisée de vos mots de passe perdus ou bloqués. Nous vous aidons à retrouver l'accès à votre session Windows en toute sécurité.</p>
+                <h3>Sécurité Totale</h3>
+                <p>Éradication de virus et installation de barrières de défense contre les malwares.</p>
             </div>
             <div class="card fade-in">
                 <i class='bx bxs-hdd service-icon'></i>
-                <h3>Récupération de Données</h3>
-                <p>Expertise technique pour récupérer vos fichiers, photos et documents importants supprimés par erreur ou situés sur des supports endommagés (Clé USB, Disque Dur).</p>
+                <h3>Récupération Données</h3>
+                <p>Récupération de vos documents précieux sur supports corrompus ou supprimés.</p>
             </div>
-            <div class="card fade-in">
-                <i class='bx bx-tachometer service-icon'></i>
-                <h3>Optimisation PC</h3>
-                <p>Votre ordinateur est lent ? Nous effectuons un nettoyage en profondeur du système pour booster sa vitesse et sa réactivité comme au premier jour.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-container">
+            <div class="about-text fade-in">
+                <h2>À propos de l'Expert</h2>
+                <p>Étudiant en Banque et Finance passionné par la technologie, j'allie rigueur financière et expertise technique pour offrir des services informatiques de haute qualité. Mon objectif est de rendre la tech accessible et fiable pour tous à Kindia.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>Ce que disent nos clients</h2>
+        <div class="testimonial-grid">
+            <div class="testi-card">
+                <p>"Service impeccable pour mon PC lent. Travail rapide et sérieux."</p>
+                <span>- Ousmane K.</span>
+            </div>
+            <div class="testi-card">
+                <p>"Mes photos de famille étaient perdues, MHD-tech les a toutes retrouvées !"</p>
+                <span>- Fatoumata B.</span>
             </div>
         </div>
     </section>
 
     <section id="portfolio">
-        <h2>Mon Portfolio de Travail</h2>
-        <p class="section-description">Voici des exemples de mes interventions récentes. Je mets cette section à jour au fur et à mesure.</p>
-        
+        <h2>Portfolio & Réalisations</h2>
         <div class="portfolio-container">
             <div class="portfolio-item fade-in">
-                <img src="https://images.unsplash.com/photo-1593640495253-23196b27a05f?auto=format&fit=crop&w=600&q=80" alt="Réparation PC">
-                <div class="portfolio-overlay">
-                    <h4>Installation Système</h4>
-                    <p>Optimisation complète d'un PC sous Windows 11.</p>
-                </div>
+                <img src="https://images.unsplash.com/photo-1593640495253-23196b27a05f?auto=format&fit=crop&w=600&q=80" alt="PC Windows 11">
+                <div class="portfolio-overlay"><h4>Windows 11</h4><p>Installation Pro</p></div>
             </div>
             <div class="portfolio-item fade-in">
-                <img src="https://images.unsplash.com/photo-1549497517-56740b25e796?auto=format&fit=crop&w=600&q=80" alt="Sauvetage Données">
-                <div class="portfolio-overlay">
-                    <h4>Récupération Données</h4>
-                    <p>Sauvetage de documents sur support corrompu.</p>
-                </div>
+                <img src="https://images.unsplash.com/photo-1549497517-56740b25e796?auto=format&fit=crop&w=600&q=80" alt="Disque Dur">
+                <div class="portfolio-overlay"><h4>Sauvetage</h4><p>Données récupérées</p></div>
             </div>
         </div>
-
         <div class="portfolio-more">
-            <a href="https://wa.me/224623770166" class="btn btn-alt">
-                <i class='bx bxl-whatsapp'></i> Voir plus de réalisations en direct
-            </a>
+            <a href="https://wa.me/224623770166" class="btn btn-alt"><i class='bx bxl-whatsapp'></i> Voir plus en direct</a>
         </div>
     </section>
 
     <section id="contact">
-        <h2>Contactez MHD-tech</h2>
-        <p class="section-description">Besoin d'une intervention ? Appelez-moi directement sur l'un de mes numéros.</p>
+        <h2>Besoin d'aide ?</h2>
         <div class="contact-details">
             <div class="contact-item fade-in">
                 <i class='bx bxs-phone-call'></i>
-                <p>Appel Direct 1</p>
-                <a href="tel:224623770166" class="contact-link"><strong>+224 623 77 01 66</strong></a>
+                <a href="tel:224623770166" class="contact-link">+224 623 77 01 66</a>
             </div>
             <div class="contact-item fade-in">
                 <i class='bx bxs-phone'></i>
-                <p>Appel Direct 2</p>
-                <a href="tel:224660195014" class="contact-link"><strong>+224 660 19 50 14</strong></a>
+                <a href="tel:224660195014" class="contact-link">+224 660 19 50 14</a>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 MHD-tech - Services Informatiques Professionnels. Tous droits réservés.</p>
+        <p>&copy; 2026 MHD-tech | Excellence Informatique à Kindia.</p>
     </footer>
+
+    <script>
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
+ 
