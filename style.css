@@ -94,3 +94,6 @@ footer { background: var(--dark); color: white; padding: 2rem 5%; text-align: ce
     .card, .portfolio-item, .contact-item { width: 100%; max-width: 350px; }
     #services, #portfolio, #contact { padding: 60px 5%; }
 }
+.portfolio-more { margin-top: 40px; text-align: center; }
+.btn-alt { background: #1e293b; border: 2px solid #facc15; display: inline-flex; align-items: center; gap: 10px; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; }
+.btn-alt:hover { background: #facc15; color: #1e293b; }
