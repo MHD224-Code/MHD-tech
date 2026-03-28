@@ -11,11 +11,11 @@
 .spinner { width: 50px; height: 50px; border: 5px solid #334155; border-top: 5px solid var(--accent); border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 10px; }
 @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
-/* TYPO & GÉNÉRAL */
+/* GÉNÉRAL */
 body { font-family: 'Inter', sans-serif; margin: 0; background: var(--light); color: var(--dark); scroll-behavior: smooth; line-height: 1.6; }
 h2.section-title { font-size: 2.2rem; text-align: center; margin-bottom: 40px; font-weight: 800; color: var(--dark); text-transform: uppercase; }
 
-/* NAVIGATION CENTRÉE */
+/* NAV CENTRÉE */
 nav { background: rgba(15, 23, 42, 0.98); padding: 1.2rem 0; position: sticky; top: 0; z-index: 100; text-align: center; border-bottom: 1px solid #1e293b; }
 .nav-container { display: flex; justify-content: center; width: 100%; }
 .logo { font-size: 1.5rem; font-weight: 800; color: white; letter-spacing: 1px; }
@@ -24,34 +24,39 @@ nav { background: rgba(15, 23, 42, 0.98); padding: 1.2rem 0; position: sticky; t
 header { height: 90vh; background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1350&q=80') center/cover; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 0 var(--side-padding); }
 .hero h1 { font-size: 3rem; margin-bottom: 20px; text-align: center; }
 .brand-name { color: var(--accent); text-transform: uppercase; }
-.hero p { max-width: 700px; margin: 0 auto 30px; }
-.hero-btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
-
-/* BOUTONS */
-.btn { background: var(--primary); color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; transition: 0.3s; }
+.hero-btns { display: flex; justify-content: center; margin-top: 30px; }
+.btn { background: var(--primary); color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; }
 .btn-alt { background: #1e293b; border: 2px solid var(--accent); display: inline-flex; align-items: center; gap: 10px; color: white; }
 
-/* SERVICES GRID */
-#services { padding: 80px var(--side-padding); background: #f1f5f9; }
-.service-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-.card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; border-top: 4px solid var(--primary); }
-.card:hover { transform: translateY(-5px); }
+/* SECTIONS GRID */
+section { padding: 80px var(--side-padding); }
+.engagements-grid, .service-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; text-align: center; }
+.eng-card, .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--primary); }
 .service-icon { font-size: 3rem; color: var(--primary); margin-bottom: 15px; }
 
-/* RÉALISATIONS CENTRÉES */
-#portfolio { padding: 80px var(--side-padding); text-align: center; }
+/* STYLE À PROPOS */
+.about-container { max-width: 800px; margin: 0 auto; text-align: center; }
+.about-text p { font-size: 1.1rem; color: #475569; margin-bottom: 20px; }
+
+/* TÉMOIGNAGES CENTRÉS */
+.testimonial-grid { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+.testi-card { background: #f1f5f9; padding: 30px; border-radius: 15px; width: 100%; max-width: 350px; text-align: center; }
+.testi-card span { display: block; margin-top: 15px; font-weight: 800; color: var(--primary); }
+
+/* RÉALISATIONS */
+#portfolio { text-align: center; }
 .portfolio-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 30px; }
 .portfolio-item { border-radius: 15px; overflow: hidden; position: relative; }
 .portfolio-item img { width: 100%; height: 250px; object-fit: cover; }
-.portfolio-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s; }
+.portfolio-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: 0.3s; }
 .portfolio-item:hover .portfolio-overlay { opacity: 1; }
 
-/* CONTACT CENTRÉ */
-#contact { padding: 80px var(--side-padding); text-align: center; }
-.contact-details { display: flex; gap: 20px; justify-content: center; align-items: center; flex-wrap: wrap; }
-.contact-item { background: white; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0; min-width: 200px; }
+/* CONTACT (IMAGE 5) */
+.contact-details { display: flex; gap: 30px; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 30px; }
+.contact-item { background: white; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0; min-width: 250px; text-align: center; }
+.contact-link strong { font-size: 1.3rem; color: var(--primary); }
+.contact-separator { font-size: 1.5rem; font-weight: 800; color: #64748b; }
 
-/* FOOTER */
 footer { padding: 40px; background: var(--dark); color: #94a3b8; text-align: center; }
 
 @media (max-width: 768px) {
