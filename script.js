@@ -10,7 +10,7 @@ window.onload = function() {
         messagePrefix = "Bonsoir";
     }
 
-    const base_url = "https://wa.me/623 77 01 66"; // Remplace ici par ton numéro WhatsApp final
+    const base_url = "https://wa.me/224623770166"; 
     const full_message = `${messagePrefix} MHD-TECH, j’ai besoin d’une assistance pour...`;
     
     contactBtn.href = `${base_url}?text=${encodeURIComponent(full_message)}`;
