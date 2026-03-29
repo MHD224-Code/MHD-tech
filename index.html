@@ -16,9 +16,9 @@
         <div class="hero-content">
             <h1><span class="double-underline">MHD-tech</span> : Bienvenue chez Votre Expert Informatique</h1>
             <p>Maintenance, Sécurité et Récupération de données pour tous.</p>
-            <a href="#" id="whatsapp-link" class="whatsapp-btn">
+            <a href="https://wa.me/224623770166" class="whatsapp-btn">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="wa-icon">
-    <span id="whatsapp-text">Me contacter sur WhatsApp</span>
+    Me contacter sur WhatsApp
 </a>
         </div>
     </header>
@@ -114,3 +114,30 @@
         <p>&copy; 2026 MHD-tech | Excellence Informatique Professionnelle.</p>
     </div>
 </footer>
+        <script>
+        function configurerWhatsApp() {
+            const now = new Date();
+            const heure = now.getHours();
+            // On cherche le bouton WhatsApp dans le haut de la page (Hero)
+            const lien = document.querySelector('.whatsapp-btn');
+            
+            if(lien) {
+                // Détermine la salutation selon l'heure
+                const salutation = (heure >= 18 || heure < 5) ? "Bonsoir" : "Bonjour";
+                
+                // Prépare le message avec l'incitation
+                const message = `${salutation} MHD-TECH, je viens de voir votre site. Je voudrais un service pour mon pc pour...`;
+                
+                // Encode et met à jour le lien
+                const messageEncode = encodeURIComponent(message);
+                lien.href = `https://wa.me/224623770166?text=${messageEncode}`;
+            }
+        }
+
+        // Lance la configuration au chargement
+        window.onload = configurerWhatsApp;
+    </script>
+
+</body>
+</html>
+
