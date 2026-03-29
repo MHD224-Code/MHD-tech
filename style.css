@@ -176,39 +176,53 @@ section h2 { font-size: 2rem; margin-bottom: 50px; color: var(--dark-navy); }
 .testimonial-box p { font-style: italic; margin-bottom: 10px; }
 .testimonial-box span { font-weight: bold; color: #64748b; }
 
-/* --- CONTACT (VERSION CORRIGÉE) --- */
-.centered-title {
+/* --- SECTION CONTACT CORRIGÉE --- */
+#contact {
+    padding: 60px 20px;
     text-align: center;
-    width: 100%;
-    margin-bottom: 30px;
+    background-color: #ffffff;
 }
 
-.contact-flex-container {
+.contact-label {
+    font-size: 1.2rem; /* Taille moyenne */
+    font-weight: bold; /* En gras */
+    color: #0f172a;
+    margin-bottom: 25px;
+    text-transform: none; /* Pas de majuscules automatiques */
+}
+
+.contact-flex-row {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    flex-wrap: wrap; /* Pour mobile */
+    flex-direction: row; /* Force l'alignement horizontal */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement (le secret de l'alignement) */
+    gap: 15px;
+    flex-wrap: wrap; /* Permet de passer à la ligne uniquement sur petit téléphone */
 }
 
-.blue-phone-number {
-    color: #0ea5e9; /* Couleur bleue */
-    font-size: 1.6rem;
+.number-box {
+    border: 1px solid #e2e8f0;
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.blue-num {
+    color: #0ea5e9 !important; /* Bleu vif */
+    font-size: 1.4rem;
     font-weight: 800;
     text-decoration: none;
-    border: 2px solid #e2e8f0;
-    padding: 12px 20px;
-    border-radius: 10px;
 }
 
-.separator-text {
-    font-size: 1.2rem;
+.or-text {
+    font-size: 1.1rem;
     font-weight: bold;
     color: #64748b;
 }
 
 .footer-legal {
-    text-align: center;
-    margin-top: 60px;
+    margin-top: 50px;
+    font-size: 0.85rem;
     color: #94a3b8;
 }
