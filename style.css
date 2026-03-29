@@ -226,3 +226,40 @@ section h2 { font-size: 2rem; margin-bottom: 50px; color: var(--dark-navy); }
     font-size: 0.85rem;
     color: #94a3b8;
 }
+/* PERFECTIONNEMENT BOUTON WHATSAPP */
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: #25D366; /* Vert WhatsApp officiel */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px; /* Forme pilule plus moderne */
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+    animation: pulse-wa 2s infinite; /* Animation douce */
+}
+
+.wa-icon {
+    width: 25px;
+    height: 25px;
+}
+
+/* Effet au survol */
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(18, 140, 126, 0.4);
+}
+
+/* Animation de pulsation discrète */
+@keyframes pulse-wa {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
