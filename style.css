@@ -13,9 +13,11 @@ body { font-family: 'Inter', sans-serif; margin: 0; background: var(--light); co
 .spinner { width: 45px; height: 45px; border: 4px solid #334155; border-top-color: var(--accent); border-radius: 50%; animation: spin 1s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* --- ACCUEIL ÉPURÉ --- */
+/* --- SECTION ACCUEIL (HERO) --- */
 .main-header { 
     height: 100vh; 
+    width: 100%;
+    /* Utilise ton image claire sans filtre bleu */
     background: url('hero-mhd.jpg.png') center/cover no-repeat; 
     display: flex; 
     flex-direction: column;
@@ -25,7 +27,7 @@ body { font-family: 'Inter', sans-serif; margin: 0; background: var(--light); co
     padding: 0 20px;
 }
 
-/* Placement en haut à gauche */
+/* Positionnement du bouton Services en haut à gauche */
 .nav-container {
     position: absolute;
     top: 25px;
@@ -33,7 +35,7 @@ body { font-family: 'Inter', sans-serif; margin: 0; background: var(--light); co
     width: auto;
 }
 
-/* Le bouton bleu 'Services' en haut à gauche */
+/* Le bouton bleu 'Services' (Texte blanc, fond bleu) */
 .btn-nav-blue {
     background-color: #2563eb;
     color: #ffffff !important;
@@ -41,43 +43,42 @@ body { font-family: 'Inter', sans-serif; margin: 0; background: var(--light); co
     border-radius: 6px;
     text-decoration: none;
     font-weight: 700;
-    font-size: 1rem;
-    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+    font-size: 0.9rem;
+    display: inline-block;
 }
 
-/* Texte central (Couleur foncée pour le fond clair) */
+/* Texte central : Couleur foncée pour être lisible sur le PC blanc */
 .hero-content {
     text-align: center;
-    max-width: 750px;
+    max-width: 800px;
 }
 
 .hero-content h1 {
     font-size: 2.5rem; 
     font-weight: 900;
-    color: #0f172a; /* Bleu nuit pour la lisibilité sur fond blanc */
+    color: #0f172a; /* Bleu nuit très foncé */
     margin-bottom: 10px;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    color: #334155;
+    color: #334155; /* Gris ardoise foncé */
     margin-bottom: 30px;
 }
 
-/* Bouton WhatsApp central */
+/* Bouton WhatsApp central (Fond bleu, Texte blanc) */
 .btn-whatsapp {
     background-color: #2563eb;
     color: #ffffff !important;
-    padding: 16px 32px;
+    padding: 15px 30px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 700;
     font-size: 1.1rem;
     display: inline-block;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
-
 /* SECTIONS */
 section { padding: 80px var(--side-padding); }
 h2.section-title { font-size: 2.2rem; text-align: center; margin-bottom: 40px; font-weight: 800; text-transform: uppercase; }
